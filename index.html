@@ -13,34 +13,39 @@
             background: #f4f4f4;
             color: #333;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
         header {
             background: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
-        h1, h2 {
-            color: #333;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .nav-buttons button:hover {
+            background: #005bb5;
         }
         section {
             padding: 20px;
             background: #fff;
             margin-bottom: 20px;
             border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-        }
-        a {
-            color: #0066cc;
         }
         .profile-img {
             float: left;
@@ -52,7 +57,18 @@
         .clear {
             clear: both;
         }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
     </style>
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -63,19 +79,26 @@
     </header>
 
     <div class="container">
-        <section>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('about')">About</button>
+            <button onclick="scrollToSection('short-bio')">Short Bio</button>
+            <button onclick="scrollToSection('publications')">Publications</button>
+        </div>
+
+        <section id="about">
             <img src="profile-photo.jpg" alt="Konstantinos Fotopoulos" class="profile-img">
             <div class="clear"></div>
             <h2>About Me</h2>
             <p>Hello! I am Konstantinos Fotopoulos, a dedicated and passionate student currently in my fifth year at the National Technical University of Athens, pursuing a degree in Electrical and Computer Engineering. My academic journey has been marked by a strong commitment to excellence and a deep interest in various fields of computer science and engineering. I am particularly interested in areas like algorithms, artificial intelligence, and robotics, and I am eager to contribute to cutting-edge research and technology development.</p>
+            <p>I began my academic career at the Arsakeio School in Psychiko, where I excelled in my studies, achieving a GPA of 19.8/20. Currently, I am focused on completing my degree at the National Technical University of Athens with a GPA of 9.69/10. Alongside my studies, I have gained valuable experience as a lab assistant and through various research and volunteering opportunities. My involvement in programming competitions and international mathematics and physics contests has further honed my problem-solving and analytical skills.</p>
         </section>
 
-        <section>
+        <section id="short-bio">
             <h2>Short Bio</h2>
             <p>I began my academic career at the Arsakeio School in Psychiko, where I excelled in my studies, achieving a GPA of 19.8/20. Currently, I am focused on completing my degree at the National Technical University of Athens with a GPA of 9.69/10. Alongside my studies, I have gained valuable experience as a lab assistant and through various research and volunteering opportunities. My involvement in programming competitions and international mathematics and physics contests has further honed my problem-solving and analytical skills.</p>
         </section>
 
-        <section>
+        <section id="publications">
             <h2>Publications</h2>
             <p>As of now, I am in the early stages of my academic career and do not have any formal publications. However, I am actively involved in research and plan to contribute to academic papers and publications in the near future. I am currently working on research projects related to computational geometry and machine learning, and I aim to share my findings with the academic community through peer-reviewed journals and conferences.</p>
         </section>
