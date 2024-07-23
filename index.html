@@ -65,9 +65,23 @@
         }
     </style>
     <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            function scrollToSection(id) {
+                document.querySelector(`#${id}`).scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            document.getElementById('about-btn').addEventListener('click', function() {
+                scrollToSection('about');
+            });
+            
+            document.getElementById('short-bio-btn').addEventListener('click', function() {
+                scrollToSection('short-bio');
+            });
+            
+            document.getElementById('publications-btn').addEventListener('click', function() {
+                scrollToSection('publications');
+            });
+        });
     </script>
 </head>
 <body>
@@ -80,9 +94,9 @@
 
     <div class="container">
         <div class="nav-buttons">
-            <button onclick="scrollToSection('about')">About</button>
-            <button onclick="scrollToSection('short-bio')">Short Bio</button>
-            <button onclick="scrollToSection('publications')">Publications</button>
+            <button id="about-btn">About</button>
+            <button id="short-bio-btn">Short Bio</button>
+            <button id="publications-btn">Publications</button>
         </div>
 
         <section id="about">
@@ -161,14 +175,10 @@
             <h2>Academic Courses and Specializations</h2>
             <p><strong>Core Courses:</strong><br>
             - Computer Programming<br>
-            - Mathematical Analysis<br>
-            - Linear Algebra<br>
-            - Signals and Systems<br>
-            - Probability Theory and Statistics<br>
-            - Communication Networks<br>
-            - Computer Architecture<br>
-            - Artificial Intelligence</p>
-            <p><strong>Specialized Streams:</strong><br>
+            - Mathematics (Analysis, Linear Algebra)<br>
+            - Physics (Mechanics, Wave and Quantum Physics)<br>
+            - Electrical and Electronics Engineering (Circuits, Networks)</p>
+            <p><strong>Specializations:</strong><br>
             - Flow Y: Computer Systems (Computer Architecture, Microprocessors, Operating Systems)<br>
             - Flow L: Computer Software (Algorithms, Artificial Intelligence, Software Engineering)<br>
             - Flow S: Signals, Automatic Control, and Robotics (Computer Vision, Natural Language Processing, Signal Processing, Control, Robotics)</p>
