@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konstantinos Fotopoulos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .nav-buttons button:hover {
+            background: #005bb5;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .profile-img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .clear {
+            clear: both;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function scrollToSection(id) {
+                document.querySelector(`#${id}`).scrollIntoView({ behavior: 'smooth' });
+            }
+            document.getElementById('about-btn').addEventListener('click', function() {
+                scrollToSection('about');
+            });
+            document.getElementById('publications-btn').addEventListener('click', function() {
+                scrollToSection('publications');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Konstantinos Fotopoulos</h1>
+            <p>Email: <a href="mailto:kostfoto2001@gmail.com">kostfoto2001@gmail.com</a> | Tel: +30-6934826216 | <a href="https://scholar.google.com/citations?user=gE-tRtAAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-buttons">
+            <button id="about-btn">About</button>
+            <button id="publications-btn">Publications</button>
+        </div>
+
+        <section id="about">
+<!--             <img src="profile-photo.jpg" alt="Konstantinos Fotopoulos" class="profile-img"> -->
+<!--             <div class="clear"></div> -->
+            <h2>About Me</h2>
+            <p>My name is Konstantinos Fotopoulos, and I am a soon to be Computer Science MSc student at ETH Zurich. After the Master's degree at ETH, I hope to continue my academic journey by pursuing a PhD.</p>
+            <p>In 2024, I earned my Diploma (an integrated BSc and MEng degree) in Electrical and Computer Engineering from the National Technical University of Athens. For my thesis, supervised by Prof. Petros Maragos, I explored the use of tropical geometry in neural network compression.</p>
+            <p>After finishing my degreee, I worked as a research collaborator at the Athena Research Center, working again under the supervision of Prof. Maragos. My research focused on the intersection of machine learning, tropical geometry, and mathematical morphology. I investigated the challenges of training morphological neural networks, and worked torwards trainable morholoigcal neural network architectures.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>
+                    <strong>Integrated BSc + MEng in Electrical and Computer Engineering</strong> 
+                    <span style="float: right;">Sep. 2019 – Oct. 2024</span><br>
+                    <em>National Technical University of Athens, Greece</em>
+                    <ul style="list-style-type: none; padding-left: 1em; margin-top: 0.5em;">
+                        <li>GPA: 9.78/10 (5th out of 344 graduates)</li>
+                        <li>Thesis: <em>Tropical Geometry and Applications in Machine Learning</em></li>
+                        <li>
+                            <a href="http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19355" target="_blank">
+                                http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19355
+                            </a>
+                        </li>
+                        <li>Supervisor: Prof. Petros Maragos</li>
+                        <li>Subjects of Interest: Machine Learning and AI, Algorithms and Complexity, Measure Theory, Algebra, Cryptography, Pattern Recognition, Computer Vision, NLP, Robotics.</li>
+                    </ul>
+                </li>
+                <li style="margin-top: 1.5em;">
+                    <strong>High School Diploma</strong> 
+                    <span style="float: right;">2019</span><br>
+                    <em>Arsakeio School in Psychiko, Greece</em>
+                    <ul style="list-style-type: none; padding-left: 1em; margin-top: 0.5em;">
+                        <li>GPA: 19.8/20</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="research-experience">
+            <h2>Research Experience</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>
+                    <strong>Research Collaborator</strong> 
+                    <span style="float: right;">Dec. 2024* – June 2025</span><br>
+                    <em>Robotics Institute, Athena Research Center</em><br>
+                    Under the supervision of Prof. Petros Maragos, I conducted research in the area of morphological neural networks. 
+                    Although my official employment began in February 2025, I started contributing to the project in December 2024, when I turned in my first report.
+                    In collaboration with a PhD student, I explored the application of morphological networks 
+                    to acoustic data and proposed the Sparse-Morph architecture, which demonstrated modest improvements in pruning efficiency and 
+                    convergence speed—work that led to a paper accepted at EUSIPCO 2025. In parallel, I pursued research on 
+                    the training of deep morphological networks. I formally showed that, despite their inherent non-linearity, these networks benefit 
+                    from "linear" activations. I designed four architectures under three different constraint settings and proved that two of them are 
+                    universal approximators. Empirical results confirmed that my network are trainable, one of my networks significantly accelerated gradient descent when 
+                    trained with large batches, and my proposed architectures showed better pruning characteristics than their linear counterparts. 
+                    These findings are currently under review at NeurIPS.                    
+                </li>
+        
+                <li style="margin-top: 1.5em;">
+                    <strong>MEng Thesis Student</strong> 
+                    <span style="float: right;">Nov. 2023 – Oct. 2024</span><br>
+                    <em>School of Electrical and Computer Engineering, NTUA</em><br>
+                    Under the supervision of Prof. Petros Maragos, I conducted research on the intersection of Tropical Geometry and Machine Learning. 
+                    My work led to the development of a refined theorem for the approximation of tropical polynomials, along with a novel algorithm for 
+                    neural network compression. My method improved upon a prior algorithm of another student. I provided theoretical guarantees for my 
+                    algorithm’s performance and performed comparative experiments. My algorithm demonstrated competitive results with strong methods 
+                    such as ThiNet and CUP—marking the first time a tropical geometric approach reached this level of performance.
+                </li>
+        
+                <li style="margin-top: 1.5em;">
+                    <strong>Undergraduate Trainee</strong> 
+                    <span style="float: right;">Apr. 18 – May 13, 2022</span><br>
+                    <em>Immunology-Histocompatibility Dept., “Evangelismos” Hospital</em><br>
+                    During this short traineeship, I received training in using sequencing software for the identification of novel alleles. 
+                    I accepted the role out of curiosity; however, my role in the lab was for mundane work. I contributed minorly to a publication and
+                    several non-peer-reviewed new allele alerts (HLA@Wiley), which I do not consider representative of my aptidute in research.
+                </li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications / Preprints</h2>
+            <ol>
+                <li>
+                    K. Fotopoulos, P. Maragos. <strong>"Towards Training Deep Morphological Neural Networks"</strong>, 
+                    arXiv preprint (<a href="https://arxiv.org/abs/2505.09710">arXiv:2505.09710</a>), 2025.<br>
+                    Submitted to <em>Neural Information Processing Systems (NeurIPS), 2025</em>.
+                </li>
+                <li>
+                    K. Fotopoulos, C. Garoufis, P. Maragos. <strong>"Sparse Hybrid Linear-Morphological Networks"</strong>, 
+                    arXiv preprint (<a href="https://arxiv.org/abs/2504.09289">arXiv:2504.09289</a>), 2025.<br>
+                    Accepted in the <em>European Signal Processing Conference (EUSIPCO), 2025</em>.
+                </li>
+                <li>
+                    K. Fotopoulos, P. Maragos, P. Misiakos. <strong>"TropNNC: Structured Neural Network Compression Using Tropical Geometry"</strong>, 
+                    arXiv preprint (<a href="https://arxiv.org/abs/2409.03945">arXiv:2409.03945</a>), 2024.<br>
+                </li>
+                <li>
+                    D. I. Kouniaki, K. V. Fotopoulos, K. Tarassi, A. Tsirogianni. <strong>"Utilizing Massively Parallel Sequencing (MPS) of Human Leukocyte Antigen (HLA) Gene Polymorphism to Assess Relatedness in Deficiency Parentage Testing"</strong>, 
+                    <em>Genes</em>, 15(2):150, 2024.
+                </li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Konstantinos Fotopoulos</p>
+    </footer>
+</body>
+</html>
